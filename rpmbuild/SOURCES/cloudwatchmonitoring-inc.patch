@@ -1,0 +1,26 @@
+diff -ru a/mon-get-instance-stats.pl b/mon-get-instance-stats.pl
+--- a/mon-get-instance-stats.pl	2014-08-25 19:09:57.545224775 +0000
++++ b/mon-get-instance-stats.pl	2014-08-25 19:11:22.160502031 +0000
+@@ -50,8 +50,7 @@
+ 
+ BEGIN
+ {
+-  my $script_dir = &File::Basename::dirname($0);
+-  push @INC, $script_dir;
++  push @INC, "/opt/aws/apitools/mon/lib";
+ }
+ 
+ use CloudWatchClient;
+diff -ru a/mon-put-instance-data.pl b/mon-put-instance-data.pl
+--- a/mon-put-instance-data.pl	2014-08-25 19:09:57.545224775 +0000
++++ b/mon-put-instance-data.pl	2014-08-25 19:11:17.984537684 +0000
+@@ -79,8 +79,7 @@
+ 
+ BEGIN
+ {
+-  my $script_dir = &File::Basename::dirname($0);
+-  push @INC, $script_dir;
++  push @INC, "/opt/aws/apitools/mon/lib";
+ }
+ 
+ use CloudWatchClient;
